@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "3003:3000"
+    environment:
+      DATABASE_URL: postgresql://myuser:12345@172.17.0.2:5432/mydatabase  # Corrected to use the proper IP
